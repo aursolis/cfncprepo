@@ -3,6 +3,7 @@ phases:
   build:
     commands:
       - aws codebuild batch-get-builds --ids $CODEBUILD_BUILD_ID > build.info
+      - touch happy.txt
 artifacts: 
   files: 
     - '**/*'
