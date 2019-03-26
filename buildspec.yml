@@ -2,8 +2,7 @@ version: 0.2
 phases:
   build:
     commands:
-      - date
-      - pwd
+      - aws codebuild batch-get-builds --ids $CODEBUILD_BUILD_ID > build.info
 artifacts: 
   files: 
     - '**/*'
